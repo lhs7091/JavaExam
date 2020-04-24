@@ -17,8 +17,10 @@ public class DynamicBeat extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
-        introBackground = new ImageIcon(Main.class.getResource("../images/introBackground.jpg")).getImage();
-
+        //for mac
+        //introBackground = new ImageIcon(Main.class.getResource("../images/introBackground.jpg")).getImage();
+        //for windows10
+        introBackground = new ImageIcon(Main.class.getResource("..\\images\\introBackground.jpg")).getImage();
         Music introMusic = new Music("dizzy.mp3", true);
         introMusic.start();
     }

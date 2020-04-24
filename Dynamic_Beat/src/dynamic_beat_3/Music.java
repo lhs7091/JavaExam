@@ -18,7 +18,11 @@ public class Music extends Thread{
     public Music(String name, boolean  isLoop){
         try{
             this.isLoop = isLoop;
-            file = new File("/home/lhs/java/JavaExam/Dynamic_Beat/src/music/"+name);
+            // for mac
+            //file = new File("/home/lhs/java/JavaExam/Dynamic_Beat/src/music/"+name);
+            // for windows10
+            //file = new File(Main.class.getResource("C:\\Users\\lhs\\Desktop\\java\\JavaExam\\Dynamic_Beat\\src\\music\\dizzy.mp3").toURI());
+            file = new File("C:\\Users\\lhs\\Desktop\\java\\JavaExam\\Dynamic_Beat\\src\\music\\dizzy.mp3");
             fis = new FileInputStream(file);
             bis = new BufferedInputStream(fis);
             player = new Player(bis);
